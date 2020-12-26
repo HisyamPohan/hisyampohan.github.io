@@ -1,0 +1,284 @@
+html{
+    position: relative;
+}
+
+body{
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.jumbotron {
+    height: 950px;
+    background-image: url(../image/bgJombotron.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 100%;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* .sosmed ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    display: flex;
+} */
+
+.jumbotron h1, .jumbotron p{
+    text-shadow: 5px 5px 7px rgba(0,0,0,.6);
+    font-family: Montserrat, sans-serif;
+
+}
+
+.jumbotron h1 {
+    font-size: 70px;
+}
+
+.jumbotron p {
+    font-size: 35px;
+    margin-bottom: 150px;
+}
+
+
+hr {
+    width: 300px;
+    border-top: 3px solid #BDBDBD;
+}
+
+section {
+    min-height: 500px;
+}
+
+.about {
+    
+    margin-bottom: 250px;
+}
+
+.about .isiabout {
+    padding-top: 70px ;
+}
+
+.about img {
+    height: 55px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about .design {
+    margin-left: -40px;
+    padding-top: 50px;
+}
+
+.about .design2 {
+    padding-top: 28px;
+    padding-left: 15px;
+}
+
+.about .design3 {
+    padding-top: 28px;
+    margin-left: -40px;
+}
+
+.portfolio {
+    background-color: #eee;
+}
+
+.portfolio .thumbnail {
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: .8s;
+    position: relative;
+    margin-bottom: 150px;
+}
+
+.portfolio .thumbnail.keliatan {
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.portfolio .image{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.portfolio .tengah {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.thumbnail:hover .image {
+    opacity: 0.3;
+  }
+  
+.thumbnail:hover .tengah {
+    opacity: 1;
+  }
+ 
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0);
+    z-index: 9999;
+    transition: .7s;
+    text-align: center;
+    padding: 150px 10px 0 10px;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.7);
+}
+
+.overlay img {
+    max-height: 100%;
+    max-width: 100%;
+    box-shadow: 2px 2px 7px rgba(0,0,0,.5);
+}
+
+.overlay:target img {
+    animation: zoomFade .7s ease-in-out;
+}
+
+.overlay .close{
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    margin-left: -10px;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: 1px solid white;
+    line-height: 14px;
+    padding: 5px;
+    opacity: 0;
+}
+
+.overlay:target .close {
+    animation: slideDownFade .5s .5s forwards;
+}
+
+.overlay:target .next,
+.overlay:target .prev {
+    animation: fadeTok .5s .5s forwards;
+}
+
+
+.next, .prev {
+    width: 96px;
+    height: 96px;
+    background-image: url(../image/next.png);
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+}
+
+.prev {
+    background-image: url(../image/previous.png);
+    margin-left: -100px;
+
+}
+
+
+
+@keyframes fadeTok {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomFade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDownFade {
+    0% {
+        opacity: 0;
+        margin-top: -20px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+
+}
+
+.contact {
+    min-height: 800px;
+}
+
+.contact .undip,
+.ap {
+    margin-top: 50px;
+}
+
+.contact .logoundip img,
+.logoap img{
+    height: 150px;
+}
+
+.contact .card {
+    position: relative;
+    box-shadow: 0 10px 30px -15px rgba(0,0,0,.2);
+    border-radius: 10px;
+    border: 1px solid hsla(0,0%,82.7%,.397);
+}
+
+.contact .waktukerja {
+    margin-top: 20px;
+}
+
+.contact .logoundip,
+.logoap {
+    padding-top: 30px;
+}
+
+.contact .undip p,
+.ap p {
+    padding: 24px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #565656;
+    padding-top: 30px;
+}
+
+footer p {
+    color: #aaa;
+}
